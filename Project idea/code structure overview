@@ -1,0 +1,8 @@
+project/
+│
+├── dataset/               # Optional: scanned images of attendance sheets
+├── digit_model.py         # CNN model training code (based on MNIST)
+├── detect_digits.py       # Image processing and segmentation
+├── recognize_digits.py    # Run prediction on each digit
+├── attendance_logger.py   # Create CSV log of recognized IDs
+└── main.py                # Integration and execution

@@ -1,0 +1,8 @@
+Input: Scanned or camera images of attendance sheets.
+
+Detect digit regions (e.g., student ID numbers).
+
+Recognize handwritten digits using a trained CNN.
+
+Output: Mark attendance and export to Excel/CSV.
+

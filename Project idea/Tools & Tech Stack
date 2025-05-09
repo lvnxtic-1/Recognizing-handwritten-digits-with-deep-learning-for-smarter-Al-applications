@@ -1,0 +1,9 @@
+Python
+
+TensorFlow/Keras – for digit recognition
+
+OpenCV – for image pre-processing (segmentation, thresholding)
+
+Pandas – for attendance data output
+
+Tkinter or Streamlit (optional) – for GUI

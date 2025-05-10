@@ -1,0 +1,23 @@
+
+import gradio as gr
+import numpy as np
+from tensorflow.keras.models import load_model
+from PIL import Image
+
+model = load_model("mnist_cnn.h5")
+
+def predict_digit(img):
+img = img.convert("L").resize((28, 28))
+img_array = np.array(img).reshape(1, 28, 28, 1) / 255.0
+prediction = model.predict(img_array)
+return {str(i): float(prediction[0][i]) for i in range(10)}
+
+interface = gr.Interface(
+fn=predict_digit,
+inputs=gr.Image(shape=(200, 200), image_mode='L', invert_colors=False, source='upload', tool='editor'),
+outputs=gr.Label(num_top_classes=3),
+title="Handwritten Digit Recognizer",
+description="Upload a digit image or draw a number (0–9) and the AI will predict it."
+)
+
+interface.launch()

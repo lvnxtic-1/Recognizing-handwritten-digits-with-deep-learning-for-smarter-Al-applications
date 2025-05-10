@@ -1,0 +1,7 @@
+
+<!DOCTYPE html> <html lang="en"> <head> <meta charset="UTF-8"> <title>Digit Recognizer</title> </head> <body> <h1>Handwritten Digit Recognizer</h1> <form method="POST" enctype="multipart/form-data"> <p>Select a digit image (28x28 PNG/JPG):</p> <input type="file" name="image" accept="image/*" required> <button type="submit">Predict</button> </form>
+{% if prediction is not none %}
+<h2>Prediction: {{ prediction }}</h2>
+{% endif %}
+
+</body> </html>
